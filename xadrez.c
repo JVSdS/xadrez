@@ -1,5 +1,69 @@
 #include <stdio.h>
 
+void frente(int numero){ //Recursividade para cada movimento
+    if (numero > 0)
+    {
+        frente(numero - 1);
+        printf("Movimento %d - Foi para frente!\n", numero);
+    }
+}
+
+void tras(int numero){
+    if (numero > 0)
+    {
+        tras(numero - 1);
+        printf("Movimento %d - Foi para trás!\n", numero);
+    }
+}
+
+void direita(int numero){
+    if (numero > 0)
+    {
+        direita(numero - 1);
+        printf("Movimento %d - Foi para direita!\n", numero);
+    }
+}
+
+void esquerda(int numero){
+    if (numero > 0)
+    {
+        esquerda(numero - 1);
+        printf("Movimento %d - Foi para esquerda!\n", numero);
+    }
+}
+
+void diagonalsd(int numero){
+    if (numero > 0)
+    {
+        diagonalsd(numero - 1);
+        printf("Movimento %d - Foi para a diagonal superior direita!\n", numero);
+    }
+}
+
+void diagonalse(int numero){
+    if (numero > 0)
+    {
+        diagonalse(numero - 1);
+        printf("Movimento %d - Foi para a diagonal superior esquerda!\n", numero);
+    }
+}
+
+void diagonalid(int numero){
+    if (numero > 0)
+    {
+        diagonalid(numero - 1);
+        printf("Movimento %d - Foi para a diagonal inferior direita!\n", numero);
+    }
+}
+
+void diagonalie(int numero){
+    if (numero > 0)
+    {
+        diagonalie(numero - 1);
+        printf("Movimento %d - Foi para a diagonal inferior esquerda!\n", numero);
+    }
+}
+
 int main(){
 
     int peca, direcao, i = 1;
@@ -26,31 +90,19 @@ int main(){
             switch (direcao)
             {
             case 1:
-            for (int i = 1; i <= 5; i++) //for usado para mover a casa 5 vezes
-            {
-                printf("Movimento %d - Foi para frente!\n", i);
-            }
+                frente(5); //Recursividade utilizada para cada movimento
             break;
         
             case 2:
-            for (int i = 1; i <= 5; i++)
-            {
-                printf("Movimento %d - Foi para trás!\n", i);
-            }
+                tras(5);
             break;
 
             case 3:
-            for (int i = 1; i <= 5; i++)
-            {
-                printf("Movimento %d - Foi para direita!\n", i);
-            }
+                direita(5);
             break;
 
             case 4:
-            for (int i = 1; i <= 5; i++)
-            {
-                printf("Movimento %d - Foi para esquerda!\n", i);
-            }
+                esquerda(5);
             break;
 
             default:
@@ -72,35 +124,19 @@ int main(){
             switch (direcao)
             {
             case 1:
-                while (i <= 5)
-                {
-                    printf("Movimento %d - Foi para a diagonal superior direita!\n", i);
-                    i++;
-                }
+                diagonalsd(5);
             break;
 
             case 2:
-                while (i <= 5)
-                {
-                    printf("Movimento %d - Foi para a diagonal superior esquerda!\n", i);
-                    i++;
-                }
+                diagonalse(5);
             break;
 
             case 3:
-                while (i <= 5)
-                {
-                    printf("Movimento %d - Foi para a diagonal inferior direita!\n", i);
-                    i++;
-                }
+                diagonalid(5);
             break;
             
             case 4:
-                while (i <= 5)
-                {
-                    printf("Movimento %d - Foi para a diagonal inferior esquerda!\n", i);
-                    i++;
-                }
+                diagonalie(5);
             break;
 
             default:
@@ -125,67 +161,35 @@ int main(){
             switch (direcao)
             {
             case 1:
-                do
-                {
-                    printf("Movimento %d - Foi para frente!\n", i);
-                    i++;
-                } while (i <= 5);
+                frente(8);
             break;
 
             case 2:
-                do
-                {
-                    printf("Movimento %d - Foi para trás!\n", i);
-                    i++;
-                } while (i <= 5);
+                tras(8);
             break;
 
             case 3:
-                do
-                {
-                    printf("Movimento %d - Foi para direita!\n", i);
-                    i++;
-                } while (i <= 5);
+                direita(8);
             break;
 
             case 4:
-                do
-                {
-                    printf("Movimento %d - Foi para esquerda!\n", i);
-                    i++;
-                } while (i <= 5);
+                esquerda(8);
             break;
 
             case 5:
-                do
-                {
-                    printf("Movimento %d - Foi para a diagonal superior direita!\n", i);
-                    i++;
-                } while (i <= 5);
+                diagonalsd(8);
             break;
 
             case 6:
-                do
-                {
-                    printf("Movimento %d - Foi para a diagonal superior esquerda!\n", i);
-                    i++;
-                } while (i <= 5);
+                diagonalse(8);
             break;
 
             case 7:
-                do
-                {
-                    printf("Movimento %d - Foi para a diagonal inferior direita!\n", i);
-                    i++;
-                } while (i <= 5);
+                diagonalid(8);
             break;
 
             case 8:
-                do
-                {
-                    printf("Movimento %d - Foi para a diagonal inferior esquerda!\n", i);
-                    i++;
-                } while (i <= 5);
+                diagonalie(8);
             break;            
 
             default:
