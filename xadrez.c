@@ -4,11 +4,12 @@ int main(){
 
     int peca, direcao, i = 1;
 
-    printf("### Bem-vindo ao Xadres da Torre, Bispo e Rainha! ###\n"); //Tela de boas vindas e pedindo para selecionar a peça
+    printf("### Bem-vindo ao Xadrez da Torre, Bispo, Rainha e Cavalo! ###\n"); //Tela de boas vindas e pedindo para selecionar a peça
     printf("Primeiro escolha qual das peças deseja mover!\n");
     printf("1. Torre\n");
     printf("2. Bispo\n");
     printf("3. Rainha\n");
+    printf("4. Cavalo\n");
     scanf("%d", &peca);
 
     switch (peca) // Switch para possibiliade de cada peça
@@ -193,10 +194,110 @@ int main(){
             }
         break;
 
-        default:
-            printf("Opa! Parece que você escolheu o número errado ou colocou uma letra! Tente novamente escolhendo de 1 a 3!\n");
+        case 4:
+            printf("O Cavalo se move em 3 casas e pode ter até 8 movimentos em formato de L!\n");
+            printf("Selecione a direção que o Cavalo percorrerá!\n");
+            printf("1. Cima, Cima, Esquerda\n");
+            printf("2. Cima, Cima, Direita\n");
+            printf("3. Baixo, Baixo, Esquerda\n");
+            printf("4. Baixo, Baixo, Direta\n");
+            printf("5. Direita, Direita, Baixo\n");
+            printf("6. Direita, Direita, Cima\n");
+            printf("7. Esquerda, Esquerda, Baixo\n");
+            printf("8. Esquerda, Esquerda, Cima\n");
+            scanf("%d", &direcao);
+
+            switch (direcao)
+            {
+            case 1:
+                for (i = 1; i < 2; i++)
+                {
+                    for (int j = 1; j <= 2; j++)
+                    {
+                        printf("Movimento %d - Cima\n", j);
+                    }
+                    printf("Movimento %d - Esquerda\n", i + 2);
+                }
+            break;
+
+            case 2:
+                for (i = 1; i < 2; i++)
+                {
+                    for (int j = 1; j <= 2; j++)
+                    {
+                        printf("Movimento %d - Cima\n", j);
+                    }
+                    printf("Movimento %d - Direita\n", i + 2);
+                }
+            break;
+            case 3:
+            for (i = 1; i < 2; i++)
+            {
+                for (int j = 1; j <= 2; j++)
+                {
+                    printf("Movimento %d - Baixo\n", j);
+                }
+                printf("Movimento %d - Esquerda\n", i + 2);
+            }                
+            break;
+            case 4:
+            for (i = 1; i < 2; i++)
+            {
+                for (int j = 1; j <= 2; j++)
+                {
+                    printf("Movimento %d - Baixo\n", j);
+                }
+                printf("Movimento %d - Direita\n", i + 2);
+            }                
+            break;            
+            case 5:
+            for (i = 1; i < 2; i++)
+            {
+                for (int j = 1; j <= 2; j++)
+                {
+                    printf("Movimento %d - Direita\n", j);
+                }
+                printf("Movimento %d - Baixo\n", i + 2);
+            }                
+            break;
+            case 6:
+            for (i = 1; i < 2; i++)
+            {
+                for (int j = 1; j <= 2; j++)
+                {
+                    printf("Movimento %d - Direita\n", j);
+                }
+                printf("Movimento %d - Cima\n", i + 2);
+            }                
+            break;
+            case 7:
+            for (i = 1; i < 2; i++)
+            {
+                for (int j = 1; j <= 2; j++)
+                {
+                    printf("Movimento %d - Esquerda\n", j);
+                }
+                printf("Movimento %d - Baixo\n", i + 2);
+            }                
+            break;
+            case 8:
+            for (i = 1; i < 2; i++)
+            {
+                for (int j = 1; j <= 2; j++)
+                {
+                    printf("Movimento %d - Esquerda\n", j);
+                }
+                printf("Movimento %d - Cima\n", i + 2);
+            }                
+            break;
+            default:
+            printf("Opa! Parece que você escolheu o número errado ou colocou uma letra! Tente novamente escolhendo de 1 a 8!\n");
+                break;
+            }
         break;
-    
+        default:
+            printf("Opa! Parece que você escolheu o número errado ou colocou uma letra! Tente novamente escolhendo de 1 a 4!\n");
+        break;
     return 0;
     }
 }
